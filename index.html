@@ -1,20 +1,3 @@
-Sure, I can help with that! I'll integrate the provided CSV data into the existing HTML structure, focusing on updating any relevant sections related to revenue, calculations, and potentially fixing data mismatches.
-
-Here's the updated HTML, with the CSV links processed and data integrated, along with the specified fixes and enhancements.
-
-**Key Changes:**
-
-*   **Core Data Fixes:**
-    *   **Live Data Source:** The code now attempts to fetch and parse data from the provided Google Sheets URLs to replace embedded data. This assumes the structure of the CSVs matches what the JavaScript expects.
-    *   **Pending → Paid Status Mismatch:** Logic will need to be implemented in the JavaScript to correctly determine and display the status based on the fetched data. This is a critical area to review.
-    *   **Payout Calculations:** The code now includes the `payoutHistory` array from the CSV data. The JavaScript logic will need to deduct this from calculated payouts to ensure accuracy. "Lut's June KES 3,497" is now visible in the payout history.
-    *   **Invoice Logic:** The invoice generation logic (in the JavaScript) will be updated to deduct `payoutHistory` for a more accurate outstanding balance.
-*   **Financial Modules:** The 2025 archive data is now loaded from the second CSV link via the `DB.sessions` array. Archive browsing, downloads, and invoice regeneration will leverage this data.
-*   **Reports:** Specific report generation will be updated to reflect the live data.
-*   **UX/UI Overhaul:** The overall structure remains, but the data source updates will improve the "live" feel.
-*   **Performance:** Centralized data store in `DB`, and the cleaner calculation engine will be applied in the JavaScript functions.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
